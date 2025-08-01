@@ -1,6 +1,7 @@
 export default function DeathStar({ size = 18, active = false }) {
-  const fill = active ? "#ffe81f" : "transparent";
-  const stroke = active ? "#000" : "#ffe81f";
+  
+  const stroke = active ? "#000" : "#ffffff";        // más contraste en off
+  const fill   = active ? "#ffe81f" : "transparent";
 
   return (
     <svg
