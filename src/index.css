@@ -40,3 +40,21 @@ html, body, #root {
   filter: saturate(1.1) contrast(1.05);
 }
 
+
+.saber { position: relative; height: 24px; }
+.saber .hilt {
+  width: 28px; height: 8px; background:#444; border:2px solid #222; border-radius:3px;
+  display:inline-block;
+}
+.saber .blade {
+  display:inline-block; height: 4px; background: var(--sw-yellow); 
+  box-shadow: 0 0 10px var(--sw-yellow), 0 0 20px var(--sw-yellow);
+  width: 0; margin-left: 2px; border-radius:2px;
+  animation: ignite .7s ease-out forwards .2s; /* se despliega tras 200ms */
+}
+.saber .title { font-weight: 800; letter-spacing: 1px; text-shadow: 0 0 6px #000; }
+
+@keyframes ignite {
+  from { width: 0; }
+  to   { width: 220px; }
+}
