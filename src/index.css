@@ -1,0 +1,42 @@
+:root {
+ 
+  --sw-yellow: #ffe81f;
+
+  --bs-primary: var(--sw-yellow);
+  --bs-primary-rgb: 255, 232, 31;
+}
+
+html, body, #root {
+  min-height: 100%;
+  background:
+    radial-gradient(1200px 800px at 10% 10%, rgba(255,255,255,0.15) 0, transparent 40%),
+    radial-gradient(1000px 600px at 90% 20%, rgba(255,255,255,0.1) 0, transparent 35%),
+    radial-gradient(1400px 900px at 50% 120%, rgba(255,255,255,0.08) 0, transparent 45%),
+    #000; /* base */
+  color: #e5e5e5;
+}
+
+
+.card, .accordion-item {
+  background-color: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(2px);
+}
+
+
+.btn-primary, .btn-outline-warning {
+  --bs-btn-color: #000;
+  --bs-btn-bg: var(--sw-yellow);
+  --bs-btn-border-color: var(--sw-yellow);
+  --bs-btn-hover-bg: #f7db12;
+  --bs-btn-hover-border-color: #f7db12;
+}
+
+.card-img-top {
+  transition: transform .25s ease, filter .25s ease;
+}
+.card:hover .card-img-top {
+  transform: translateY(-2px) scale(1.01);
+  filter: saturate(1.1) contrast(1.05);
+}
+
